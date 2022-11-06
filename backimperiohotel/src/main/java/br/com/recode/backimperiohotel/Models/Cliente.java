@@ -30,15 +30,15 @@ public class Cliente {
     private String email;
 
     @OneToMany
-    @JoinColumn(name = "codigo_reclamacao")
+    @JoinColumn(name = "codigo_cliente")
     private List<ContatoReclamacao> contato;
 
     @OneToMany
-    @JoinColumn(name = "codigo_passagens")
+    @JoinColumn(name = "codigo_cliente")
     private List<Passagem> passagens;
 
     @OneToMany
-    @JoinColumn(name = "codigo_promocoes")
+    @JoinColumn(name = "codigo_cliente")
     private List<Promocoes> promocoes;
 
 }
