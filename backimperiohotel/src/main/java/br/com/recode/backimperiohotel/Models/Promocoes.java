@@ -1,4 +1,4 @@
-package br.com.recode.backimperiohotel.Models;
+ package br.com.recode.backimperiohotel.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
