@@ -22,7 +22,7 @@ public class ClienteServicos {
     //Nesse método poderá ser retornado tanto uma Classe Cliente como ClienteResposta.
     //Esse método é responsável por solicitar as informações completas da tabela.
     //Aqui tem obrigatóriedade do preenchimento dos campos nas tabelas
-    public ResponseEntity<?> cadastrar(Cliente cliente){
+    public ResponseEntity<?> cadastrarCliente(Cliente cliente){
 
         if(cliente.getNome().equals("")){
             clienteResposta.setMensagemCliente("O nome do cliente precisa ser preenchido!");
