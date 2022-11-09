@@ -19,7 +19,7 @@ public class ContatoServicos {
     private ContatoReclamacaoResposta contatoReclamacaoResposta;
 
     //Método para cadastrar Contato de Reclamação
-    public ResponseEntity<?> cadastrarContato(ContatoReclamacao contato){
+    public ResponseEntity<?> cadastrarAlterarContato(ContatoReclamacao contato, String acao){
 
         if (contato.getNome().equals("")) {
             contatoReclamacaoResposta.setMensagemContato("O nome do cliente precisa ser preenchido!");
@@ -34,7 +34,12 @@ public class ContatoServicos {
             return new ResponseEntity<ContatoReclamacaoResposta>(contatoReclamacaoResposta, HttpStatus.BAD_REQUEST);
         }
         else{
-            return new ResponseEntity<ContatoReclamacao>(contatoRepositorio.save(contato), HttpStatus.CREATED);
+            if(acao.equals("cadastrar")){
+                return new ResponseEntity<ContatoReclamacao>(contatoRepositorio.save(contato), HttpStatus.CREATED);
+            }
+            else{
+                return new ResponseEntity<ContatoReclamacao>(contatoRepositorio.save(contato), HttpStatus.OK);
+            }
         }
     }
 
