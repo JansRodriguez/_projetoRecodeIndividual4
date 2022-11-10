@@ -1,0 +1,7 @@
+.form-contato, .form-control, .form-promocoes{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20%;
+}
