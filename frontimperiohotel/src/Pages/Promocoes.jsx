@@ -15,10 +15,11 @@ export default()=>{
             />
             <Entradas
             texto='Nome Completo'
+            tipo='text'
             />
             <Entradas
-            texto='Informe sua reclamação ou comentário'
-            tipo='textarea'
+            texto='Informe o destino que deseja acompanhar'
+            tipo='text'
             />
             <Submit
             tipo='submit'
